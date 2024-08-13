@@ -1,0 +1,21 @@
+{% extends "articles/base.html" %}
+
+{% block content %}
+  <h1></h1>
+  <div class="articles-list">
+    {% for article in articles %}
+      <div class="article">
+        <img src="{{ article.image.url }}" alt="Article image">
+        <div class="content">
+          <h2>{{ article.title }}</h2>
+          <p>{{ article.text }}</p>
+          <p>
+            {% for scope in article.scope_set.all %}
+              <span class="{% if scope.is_main %}tag-main{% else %}tag-not-main{% endif %}">{{ scope.tag.name }}</span>{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

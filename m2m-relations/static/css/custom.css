@@ -1,0 +1,45 @@
+.articles-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px; /* add some margin to the container */
+}
+
+.article {
+  margin: 10px;
+  width: calc(31% - 5px); /* adjust the width to fit your needs */
+  background-color: #f7f7f7; /* add some background color to the article */
+  padding: 0px; /* add some padding to the article */
+  border: 1px solid #ddd; /* add some border to the article */
+  border-radius: 10px; /* add some border radius to the article */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add some box shadow to the article */
+  display: flex; /* add display flex to the article */
+  flex-direction: column; /* make the article a column */
+}
+
+.article img {
+  width: 100%; /* make the image full width */
+  height: 150px; /* set a fixed height for the image */
+  object-fit: cover; /* make the image cover the entire area */
+  border-radius: 20px 20px 0 0; /* add border radius to the top corners */
+}
+
+.article .content {
+  padding: 10px; /* add some padding to the content */
+}
+
+.tag-main {
+  background-color: #337ab7; /* blue color for main tags */
+  color: white !important; 
+  border-radius: 30%;
+  padding: 5px 8px; /* add some padding to the tag */
+  font-size: 10px; /* adjust the font size to fit your needs */
+}
+
+.tag-not-main {
+  background-color: #6d6d6d; /* gray color for non-main tags */
+  color: white !important; 
+  border-radius: 30%;
+  padding: 5px 8px; /* add some padding to the tag */
+  font-size: 10px; /* adjust the font size to fit your needs */
+}
